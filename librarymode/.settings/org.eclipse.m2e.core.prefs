@@ -1,0 +1,4 @@
+activeProfiles=arquillian-jbossas-remote-7, jboss-datagrid-repository, jboss-earlyaccess-repository
+eclipse.preferences.version=1
+resolveWorkspaceProjects=true
+version=1
