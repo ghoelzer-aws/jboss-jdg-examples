@@ -1,0 +1,5 @@
+org/jboss/infinispan/demo/rest/TaskEndpoint.class
+org/jboss/infinispan/demo/model/Task.class
+org/jboss/infinispan/demo/TaskService.class
+org/jboss/infinispan/demo/rest/RestApplication.class
+org/jboss/infinispan/demo/Config.class

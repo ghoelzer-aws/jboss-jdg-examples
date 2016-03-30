@@ -1,0 +1,5 @@
+/usr/local/openshift/jdg-labs/projects/lab5/src/main/java/org/jboss/infinispan/demo/Config.java
+/usr/local/openshift/jdg-labs/projects/lab5/src/main/java/org/jboss/infinispan/demo/TaskService.java
+/usr/local/openshift/jdg-labs/projects/lab5/src/main/java/org/jboss/infinispan/demo/rest/TaskEndpoint.java
+/usr/local/openshift/jdg-labs/projects/lab5/src/main/java/org/jboss/infinispan/demo/model/Task.java
+/usr/local/openshift/jdg-labs/projects/lab5/src/main/java/org/jboss/infinispan/demo/rest/RestApplication.java
