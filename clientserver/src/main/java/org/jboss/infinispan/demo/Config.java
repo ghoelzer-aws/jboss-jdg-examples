@@ -1,10 +1,13 @@
 package org.jboss.infinispan.demo;
 
+import java.io.IOException;
+
 import javax.enterprise.inject.Produces;
 
 import org.infinispan.client.hotrod.RemoteCache;
 import org.infinispan.client.hotrod.RemoteCacheManager;
 import org.infinispan.client.hotrod.configuration.ConfigurationBuilder;
+import org.infinispan.client.hotrod.configuration.NearCacheMode;
 import org.jboss.infinispan.demo.model.Task;
 
 
@@ -25,9 +28,33 @@ public class Config {
 	 * @return org.infinispan.client.hotrod.RemoteCache<Long, Task>
 	 */
 	@Produces
-	public RemoteCache<Long, Task> getRemoteCache() {
+	public RemoteCache<Long, Task> getRemoteCache() throws IOException, DataGridConfigurationException {
+		/**
 		ConfigurationBuilder builder = new ConfigurationBuilder(); builder.addServer().host("172.30.65.245").port(11333);
 		return new RemoteCacheManager(builder.build(), true).getCache("default");
+		*/
+		RemoteCacheManager cacheManager = this.getCacheManager();
+		 return cacheManager.getCache("default");
+		}
+		 
+		public RemoteCacheManager getCacheManager() throws DataGridConfigurationException {
+		 ConfigurationBuilder builder = new ConfigurationBuilder();
+		 builder
+		  .nearCache()
+		   .mode(NearCacheMode.LAZY)
+		   .maxEntries(500)
+		  .addServer()
+		  .host("172.30.65.245")
+		  .port(11333);
+		 return new RemoteCacheManager(builder.build(), true);
+		}
+		public static class DataGridConfigurationException extends Exception
+		{
+		 private static final long serialVersionUID = -4667039447165906505L;
+		 public DataGridConfigurationException(String msg) {
+		        super(msg);
+		    }
+		 
 		}
 	
 }
