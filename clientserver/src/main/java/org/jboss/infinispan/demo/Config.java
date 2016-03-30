@@ -26,7 +26,7 @@ public class Config {
 	 */
 	@Produces
 	public RemoteCache<Long, Task> getRemoteCache() {
-		ConfigurationBuilder builder = new ConfigurationBuilder(); builder.addServer().host("localhost").port(11322);
+		ConfigurationBuilder builder = new ConfigurationBuilder(); builder.addServer().host("172.30.65.245").port(11333);
 		return new RemoteCacheManager(builder.build(), true).getCache("default");
 		}
 	
