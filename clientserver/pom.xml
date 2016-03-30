@@ -33,7 +33,7 @@
 			<dependency>
 				<groupId>org.infinispan</groupId>
 				<artifactId>infinispan-bom</artifactId>
-				<version>6.5.1.Final-redhat-4</version>
+				<version>6.5.0.Final-redhat-4</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
@@ -92,12 +92,12 @@
 		<dependency>
 			<groupId>org.infinispan</groupId>
 			<artifactId>infinispan-commons</artifactId>
-			<version>6.5.1.Final-redhat-4</version>
+			<version>6.5.0.Final-redhat-4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.infinispan</groupId>
 			<artifactId>infinispan-client-hotrod</artifactId>
-			<version>6.5.1.Final-redhat-4</version>
+			<version>6.5.0.Final-redhat-4</version>
 			<scope>compile</scope>
 		</dependency>
    		<dependency>
