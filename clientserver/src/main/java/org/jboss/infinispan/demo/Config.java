@@ -40,9 +40,6 @@ public class Config {
 		public RemoteCacheManager getCacheManager() throws DataGridConfigurationException {
 		 ConfigurationBuilder builder = new ConfigurationBuilder();
 		 builder
-		  .nearCache()
-		   .mode(NearCacheMode.LAZY)
-		   .maxEntries(500)
 		  .addServer()
 		  .host("172.30.65.245")
 		  .port(11333);
